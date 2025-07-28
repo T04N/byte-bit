@@ -683,7 +683,7 @@ body {
     background: #18181b;
     border-radius: 18px;
     padding: 1.2rem 1rem 1.5rem 1rem;
-    margin: 1.2rem 1rem 0.5rem 1rem;
+  
     box-shadow: 0 2px 12px 0 rgba(24,22,55,0.10);
     display: flex;
     flex-direction: column;
@@ -1367,11 +1367,11 @@ body {
   padding: 0.6rem 0.5rem;
 }
 .market-section .row.align-items-center:hover {
-  background: #fffbe2e33;
+  /* background: #fffbe2e33;
   box-shadow: 0 4px 18px 0 rgba(255, 190, 46, 0.10), 0 1.5px 6px 0 rgba(24, 22, 55, 0.07);
   z-index: 2;
-  position: relative;
-} 
+  position: relative; */
+}
 
 /* Partner logo marquee */
 .partner-marquee-section {
@@ -1424,14 +1424,6 @@ body {
   100% { transform: translateX(-50%); }
 } 
 
-@media (max-width: 600px) {
-  .market-section .row.fw-semibold > .col-2,
-  .market-section .row.fw-semibold > .col-1,
-  .market-section .row.align-items-center > .col-2,
-  .market-section .row.align-items-center > .col-1 {
-    display: none !important;
-  }
-} 
 
 @media (max-width: 600px) {
   /* Ẩn cột Charts và Trade, giữ lại 24H Change */
@@ -1440,5 +1432,60 @@ body {
   .market-section .row.align-items-center > .col-2:last-child,
   .market-section .row.align-items-center > .col-1 {
     display: none !important;
+  }
+} 
+
+/* Bảng thị trường thuần không Bootstrap */
+.market-row {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  min-height: 44px;
+}
+.market-header {
+  font-weight: bold;
+  color: #888;
+  background: #f6f8fa;
+}
+.market-col {
+  flex: 1 1 0;
+  padding: 8px 6px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 1rem;
+  min-width: 0;
+}
+.trade-col {
+  flex: 1 1 0;
+  text-align: center;
+}
+.chart-col {
+  flex: 1 1 0;
+  text-align: center;
+}
+.btn-trade {
+  display: inline-block;
+  color: #ffbe2e;
+  font-weight: bold;
+  font-size: 0.92rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 7px;
+  border: 1.5px solid #ffbe2e;
+  background: #fff;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btn-trade:hover {
+  background: #fff8e1;
+}
+/* Ẩn cột Trade ở mobile */
+@media (max-width: 767px) {
+  .trade-col, .chart-col {
+    display: none;
+  }
+  .market-col {
+    flex: 1 1 0;
+    min-width: 0;
   }
 } 

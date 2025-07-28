@@ -143,7 +143,7 @@ function renderMarketTabTable() {
       <div class="row fw-semibold text-secondary mb-2" style="font-size:0.8rem;">
         <div class="col-4">Trading Pairs</div>
         <div class="col-3">Last Traded Price</div>
-        <div class="col-2">24H Change</div>
+        <div class="col-3">24H Change</div>
         <div class="col-1">Trade</div>
       </div>
       <div id="marketRows"></div>
@@ -193,4 +193,8 @@ function updateMarketTabContent(symbolMap, symbol, data) {
   const changeDiv = row.querySelector('.change');
   changeDiv.textContent = changeText;
   changeDiv.className = 'col-2 change fw-bold ' + changeClass;
+  
 }
+
+window.addEventListener('DOMContentLoaded', renderMarketHeader);
+window.addEventListener('resize', renderMarketHeader);

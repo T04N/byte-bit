@@ -147,12 +147,12 @@
       </div>
     </div>
 
-  <div class="announcement-bar d-flex align-items-center justify-content-center mt-1">
+  <div class="announcement-bar d-none d-md-flex align-items-center justify-content-center mt-1" style="background:#ffbe2e;overflow:hidden;">
     <span class="announcement-icon me-2">&#128227;</span>
-    <div class="announcement-marquee-wrapper overflow-hidden flex-grow-1">
-      <div class="announcement-marquee-text fw-bold">
+    <div class="announcement-marquee-wrapper overflow-hidden flex-grow-1" style="width:100%;">
+      <marquee behavior="scroll" direction="left" scrollamount="5" class="announcement-marquee-text fw-bold" style="color:#222; font-size:1.08rem; background:transparent;">
         Welcome to Bybite! Enjoy trading and earning opportunities every day!
-      </div>
+      </marquee>
     </div>
     <span class="announcement-arrow ms-2">&#8594;</span>
   </div>
@@ -170,124 +170,85 @@
               <div class="tab-content" id="marketTabContent">
                 <div class="tab-pane fade show active" id="hot-derivatives" role="tabpanel" aria-labelledby="hot-derivatives-tab">
                   <!-- Table header -->
-                  <div class="row fw-semibold text-secondary mb-2" style="font-size:0.8rem;">
+                  <!-- <div class="row fw-semibold text-secondary mb-2" style="font-size:0.8rem;">
                     <div class="col-4">Trading Pairs</div>
                     <div class="col-4">Last Traded Price</div>
                     <div class="col-4">24H Change</div>
-                    <div class="col-2 d-none d-md-block">Charts</div>
-                    <div class="col-1 d-none d-md-block">Trade</div>
-                  </div>
+                    <!-- <div class="col-md-1 d-none d-md-block">Trade</div> -->
+                  </div> -->
                   <!-- Example rows -->
                   <div class="row align-items-center mb-2">
                     <div class="col-4 d-flex align-items-center gap-2">
                       <img src="src/imgs/coin/ETHUSDT.svg" alt="ETH" width="22" height="22">
-                      <span>ETHUSDT</span>
+                      <div>
+                        <span>ETHUSDT</span>
+                        <div class="d-block d-md-none text-secondary" style="font-size:0.92rem;">24H Change: <span class="text-success">+2.02%</span></div>
+                      </div>
                     </div>
                     <div class="col-4 fw-bold">3,817.72</div>
                     <div class="col-4 text-success fw-bold">+2.02%</div>
-                    <div class="col-2 d-none d-md-block">
-                      <svg width="40" height="18" viewBox="0 0 52 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
-                        <defs>
-                          <linearGradient id="jb6he9m1ou" x1="0" y1="0" x2="0" y2="22" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#4ade80"/>
-                            <stop offset="1" stop-color="#bbf7d0" stop-opacity="0.2"/>
-                          </linearGradient>
-                        </defs>
-                        <path d="M-1 20L-1 15.39L0 15.39L2.17 15.12L4.34 17.34L6.51 16.25L8.68 17.31L10.85 18L13.02 15.73L15.19 14.3L17.36 15.07L19.53 13.14L21.7 14.35L23.87 15.53L26.04 13.46L28.21 13.45L30.38 9.45L32.55 10.97L34.72 8.61L36.89 8.58L39.06 11.23L41.23 11.87L43.4 11.44L45.57 12.47L47.74 5L49.91 5.43L51 21 Z" fill="url(#jb6he9m1ou)" stroke="rgba(24, 22, 55, .11)" stroke-width="1"></path>
-                      </svg>
-                    </div>
-                    <div class="col-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
+                    <div class="col-md-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
                   </div>
                  
                   <div class="row align-items-center mb-2">
                     <div class="col-4 d-flex align-items-center gap-2">
                       <img src="src/imgs/coin/BTCUSDT.svg" alt="BTC" width="22" height="22">
-                      <span>BTCUSDT</span>
+                      <div>
+                        <span>BTCUSDT</span>
+                        <div class="d-block d-md-none text-secondary" style="font-size:0.92rem;">24H Change: <span class="text-success">+0.1%</span></div>
+                      </div>
                     </div>
                     <div class="col-4 fw-bold">118,017</div>
                     <div class="col-4 text-success fw-bold">+0.1%</div>
-                    <div class="col-2 d-none d-md-block">
-                      <svg width="40" height="18" viewBox="0 0 52 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
-                        <defs>
-                          <linearGradient id="jb6he9m1ou" x1="0" y1="0" x2="0" y2="22" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#4ade80"/>
-                            <stop offset="1" stop-color="#bbf7d0" stop-opacity="0.2"/>
-                          </linearGradient>
-                        </defs>
-                        <path d="M-1 20L-1 15.39L0 15.39L2.17 15.12L4.34 17.34L6.51 16.25L8.68 17.31L10.85 18L13.02 15.73L15.19 14.3L17.36 15.07L19.53 13.14L21.7 14.35L23.87 15.53L26.04 13.46L28.21 13.45L30.38 9.45L32.55 10.97L34.72 8.61L36.89 8.58L39.06 11.23L41.23 11.87L43.4 11.44L45.57 12.47L47.74 5L49.91 5.43L51 21 Z" fill="url(#jb6he9m1ou)" stroke="rgba(24, 22, 55, .11)" stroke-width="1"></path>
-                      </svg>
-                    </div>
-                    <div class="col-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
+                    <div class="col-md-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
                   </div>
                   <div class="row align-items-center mb-2">
                     <div class="col-4 d-flex align-items-center gap-2">
                       <img src="src/imgs/coin/XRPUSDT.svg" alt="XRP" width="22" height="22">
-                      <span>XRPUSDT</span>
+                      <div>
+                        <span>XRPUSDT</span>
+                        <div class="d-block d-md-none text-secondary" style="font-size:0.92rem;">24H Change: <span class="text-danger">-0.44%</span></div>
+                      </div>
                     </div>
                     <div class="col-4 fw-bold">3.1752</div>
                     <div class="col-4 text-danger fw-bold">-0.44%</div>
-                    <div class="col-2 d-none d-md-block">
-                      <svg width="40" height="18" viewBox="0 0 52 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
-                        <defs>
-                          <linearGradient id="jb6he9m1ou" x1="0" y1="0" x2="0" y2="22" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#4ade80"/>
-                            <stop offset="1" stop-color="#bbf7d0" stop-opacity="0.2"/>
-                          </linearGradient>
-                        </defs>
-                        <path d="M-1 20L-1 15.39L0 15.39L2.17 15.12L4.34 17.34L6.51 16.25L8.68 17.31L10.85 18L13.02 15.73L15.19 14.3L17.36 15.07L19.53 13.14L21.7 14.35L23.87 15.53L26.04 13.46L28.21 13.45L30.38 9.45L32.55 10.97L34.72 8.61L36.89 8.58L39.06 11.23L41.23 11.87L43.4 11.44L45.57 12.47L47.74 5L49.91 5.43L51 21 Z" fill="url(#jb6he9m1ou)" stroke="rgba(24, 22, 55, .11)" stroke-width="1"></path>
-                      </svg>
-                    </div>
-                    <div class="col-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
+                    <div class="col-md-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
                   </div>
                   <div class="row align-items-center mb-2">
                     <div class="col-4 d-flex align-items-center gap-2">
                       <img src="src/imgs/coin/SOLUSDT.svg" alt="SOL" width="22" height="22">
-                      <span>SOLUSDT</span>
+                      <div>
+                        <span>SOLUSDT</span>
+                        <div class="d-block d-md-none text-secondary" style="font-size:0.92rem;">24H Change: <span class="text-danger">-0.76%</span></div>
+                      </div>
                     </div>
                     <div class="col-4 fw-bold">186.67</div>
                     <div class="col-4 text-danger fw-bold">-0.76%</div>
-                    <div class="col-2 d-none d-md-block">
-                      <svg width="40" height="18" viewBox="0 0 52 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
-                        <defs>
-                          <linearGradient id="jb6he9m1ou" x1="0" y1="0" x2="0" y2="22" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#4ade80"/>
-                            <stop offset="1" stop-color="#bbf7d0" stop-opacity="0.2"/>
-                          </linearGradient>
-                        </defs>
-                        <path d="M-1 20L-1 15.39L0 15.39L2.17 15.12L4.34 17.34L6.51 16.25L8.68 17.31L10.85 18L13.02 15.73L15.19 14.3L17.36 15.07L19.53 13.14L21.7 14.35L23.87 15.53L26.04 13.46L28.21 13.45L30.38 9.45L32.55 10.97L34.72 8.61L36.89 8.58L39.06 11.23L41.23 11.87L43.4 11.44L45.57 12.47L47.74 5L49.91 5.43L51 21 Z" fill="url(#jb6he9m1ou)" stroke="rgba(24, 22, 55, .11)" stroke-width="1"></path>
-                      </svg>
-                    </div>
-                    <div class="col-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
+                    <div class="col-md-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
                   </div>
                   <div class="row align-items-center mb-2">
                     <div class="col-4 d-flex align-items-center gap-2">
                       <img src="src/imgs/coin/SUIUSDT.svg" alt="SUI" width="22" height="22">
-                      <span>SUIUSDT</span>
+                      <div>
+                        <span>SUIUSDT</span>
+                        <div class="d-block d-md-none text-secondary" style="font-size:0.92rem;">24H Change: <span class="text-success">+6.4%</span></div>
+                      </div>
                     </div>
                     <div class="col-4 fw-bold">4.3263</div>
                     <div class="col-4 text-success fw-bold">+6.4%</div>
-                    <div class="col-2 d-none d-md-block">
-                      <svg width="40" height="18" viewBox="0 0 52 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
-                        <defs>
-                          <linearGradient id="jb6he9m1ou" x1="0" y1="0" x2="0" y2="22" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#4ade80"/>
-                            <stop offset="1" stop-color="#bbf7d0" stop-opacity="0.2"/>
-                          </linearGradient>
-                        </defs>
-                        <path d="M-1 20L-1 15.39L0 15.39L2.17 15.12L4.34 17.34L6.51 16.25L8.68 17.31L10.85 18L13.02 15.73L15.19 14.3L17.36 15.07L19.53 13.14L21.7 14.35L23.87 15.53L26.04 13.46L28.21 13.45L30.38 9.45L32.55 10.97L34.72 8.61L36.89 8.58L39.06 11.23L41.23 11.87L43.4 11.44L45.57 12.47L47.74 5L49.91 5.43L51 21 Z" fill="url(#jb6he9m1ou)" stroke="rgba(24, 22, 55, .11)" stroke-width="1"></path>
-                      </svg>
-                    </div>
-                    <div class="col-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
+                    <div class="col-md-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
                   </div>
                   <div class="row align-items-center mb-2">
                     <div class="col-4 d-flex align-items-center gap-2">
                       <img src="src/imgs/coin/DOGEUSDT.svg" alt="DOGE" width="22" height="22">
-                      <span>DOGEUSDT</span>
+                      <div>
+                        <span>DOGEUSDT</span>
+                        <div class="d-block d-md-none text-secondary" style="font-size:0.92rem;">24H Change: <span class="text-secondary">-0%</span></div>
+                      </div>
                     </div>
                     <div class="col-4 fw-bold">0.00002706</div>
                     <div class="col-4"><span class="change-badge zero">-0%</span></div>
-                    <div class="col-2 d-none d-md-block"></div>
-                    <div class="col-1 d-none d-md-block"></div>
+                    <div class="col-md-1 d-none d-md-block"></div>
                   </div>
                 </div>
                 <div class="tab-pane fade" id="hot-coins" role="tabpanel" aria-labelledby="hot-coins-tab">
@@ -296,15 +257,15 @@
                     <div class="col-3">Last Traded Price</div>
                     <div class="col-2">24H Change</div>
                     <div class="col-2">Charts</div>
-                    <div class="col-1">Trade</div>
+                    <!-- <div class="col-1">Trade</div> -->
                   </div>
                   <div class="row align-items-center mb-2">
                     <div class="col-4 d-flex align-items-center gap-2">
                       <img src="src/imgs/coin/ETHUSDT.svg" alt="ETH" width="22" height="22">
                       <span>ETHUSDT</span>
                     </div>
-                    <div class="col-3 fw-bold">3,822.5</div>
-                    <div class="col-2 text-success fw-bold">+1.98%</div>
+                    <div class="col-4 fw-bold">3,822.5</div>
+                    <div class="col-4 text-success fw-bold">+1.98%</div>
                     <div class="col-2">
                       <svg width="40" height="18" viewBox="0 0 52 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
                         <defs>
@@ -325,7 +286,7 @@
           </div>
         </div>
       </div>
-      <div class="d-flex align-items-center gap-3 mt-4">
+      <div class="d-flex align-items-center gap-3 mt-4 d-none d-md-flex">
         <a href="#" class="btn btn-warning text-dark fw-bold px-4 py-2">Get Started &rarr;</a>
         <span class="fw-bold text-dark">Sign up now to create your own portfolio for free!</span>
       </div>
@@ -333,7 +294,7 @@
   </section>
 
 
-  <section class="get-started-section py-5" style="background:#f6f8fa;">
+  <section class="get-started-section py-5 d-none d-md-block" style="background:#f6f8fa;">
     <div class="container">
       <h2 class="fw-bold text-center mb-5" style="font-size:2.3rem;">Get Started in 30 Seconds!</h2>
       <div class="row justify-content-center g-4">
@@ -367,8 +328,9 @@
       </div>
     </div>
   </section>
+  
 
-  <section class="discover-products-section py-5" style="background:#f6f8fa;">
+  <section class="discover-products-section py-5 d-none d-md-block" style="background:#f6f8fa;">
     <div class="container">
       <h2 class="fw-bold mb-4" style="font-size:2.1rem;">Discover More Products</h2>
       <div class="row g-4 mb-2">
@@ -433,13 +395,12 @@
       </div>
     </div>
   </section>
-  <section class="stats-section py-5" style="background:#fff;">
+  <section class="stats-section py-5 d-none d-md-block" style="background:#fff;">
     <div class="container">
       <div class="row text-center text-lg-center align-items-center justify-content-center mb-3">
         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
           <div class="stat-number" data-target="20774329970">0</div>
           <div class="stat-label">24H Trading Volume (USD)</div>
-        
         </div>
         <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 d-flex flex-column align-items-center">
           <div class="stat-number" data-target="2072">0</div>
@@ -458,6 +419,9 @@
       </div>
     </div>
   </section>
+
+
+  
   <section class="platforms-section py-5" style="background:#f6f8fa;">
     <div class="container">
       <div class="row align-items-center">
@@ -496,58 +460,60 @@
       </div>
     </div>
   </section>
-
-  <section class="faqs-section py-5" style="background:#f6f8fa;">
+  <section class="faqs-mobile-section py-4 d-block d-md-none" style="background:#fff;">
     <div class="container">
-      <h2 class="fw-bold mb-4" style="font-size:2.1rem;">FAQs</h2>
-      <div class="faqs-panel-group" id="faqsPanelGroup">
-        <div class="faqs-panel">
-          <button class="faqs-panel-header" type="button" data-panel="faq1">
-            <span>Is Identity Verification required?</span>
-            <span class="faq-arrow"></span>
-          </button>
-          <div class="faqs-panel-body" id="faq1">
-            Yes, you must complete Identity Verification before making deposits or accessing Bybit's products and services. Please verify your identity <a href="#">here</a>. For more details, check out our <a href="#">Help Center article</a>.
-          </div>
+      <h2 class="fw-bold mb-4 text-dark" style="font-size:1.5rem;">Our Commitment to Compliance and Your Protection</h2>
+      <div class="mb-3 d-flex flex-row align-items-center gap-3">
+        <img src="src/imgs/faqs/AssetProtect.svg" alt="Asset Protect" style="width:28px;height:28px;">
+        <div>
+          <div class="fw-bold text-dark" style="font-size:1.15rem;">Triple-Layer Asset Protection</div>
+          <div class="text-secondary" style="font-size:1rem;">Users' funds are stored securely offline in cold wallets.</div>
         </div>
-        <div class="faqs-panel">
-          <button class="faqs-panel-header" type="button" data-panel="faq2">
-            <span>How can I enhance the security of my account?</span>
-            <span class="faq-arrow"></span>
-          </button>
-          <div class="faqs-panel-body" id="faq2">
-            Please go to the <a href="#">Account & Security</a> page to set up both Email and SMS Authentication. For extra protection, consider enabling Google Two-Factor Authentication, Anti-phishing Code, and Fund Password. For more details, check out our <a href="#">Help Center article</a>.
-          </div>
+      </div>
+      <hr>
+      <div class="mb-3 d-flex flex-row align-items-center gap-3">
+        <img src="src/imgs/faqs/privacy.svg" alt="Privacy Protection" style="width:28px;height:28px;">
+        <div>
+          <div class="fw-bold text-dark" style="font-size:1.15rem;">Privacy Protection</div>
+          <div class="text-secondary" style="font-size:1rem;">We integrate a privacy-first philosophy into all our products and services.</div>
         </div>
-        <div class="faqs-panel">
-          <button class="faqs-panel-header" type="button" data-panel="faq3">
-            <span>How can I make a deposit?</span>
-            <span class="faq-arrow"></span>
-          </button>
-          <div class="faqs-panel-body" id="faq3">
-            Bybit supports various deposit methods, including Crypto Deposit, Fiat Deposit, P2P Trading, and One-Click Buy. For more details, check out our <a href="#">Help Center article</a>.
-          </div>
+      </div>
+      <hr>
+      <div class="mb-3 d-flex flex-row align-items-center gap-3">
+        <img src="src/imgs/faqs/dataProtect.svg" alt="Advanced Data Protection" style="width:28px;height:28px;">
+        <div>
+          <div class="fw-bold text-dark" style="font-size:1.15rem;">Advanced Data Protection</div>
+          <div class="text-secondary" style="font-size:1rem;">Data is encrypted both in storage and in transit.</div>
         </div>
-        <div class="faqs-panel">
-          <button class="faqs-panel-header" type="button" data-panel="faq4">
-            <span>What are the trading fees on Bybit?</span>
-            <span class="faq-arrow"></span>
-          </button>
-          <div class="faqs-panel-body" id="faq4">
-            You can find the trading fee rates <a href="#">here</a>. VIP users will benefit from discounted rates based on their VIP level. To learn more about our VIP Program, check out our <a href="#">Help Center article</a>.
-          </div>
+      </div>
+      <hr>
+      <div class="mb-3 d-flex flex-row align-items-center gap-3">
+        <img src="src/imgs/faqs/monitor.svg" alt="Real-Time Monitoring" style="width:28px;height:28px;">
+        <div>
+          <div class="fw-bold text-dark" style="font-size:1.15rem;">Real-Time Monitoring</div>
+          <div class="text-secondary" style="font-size:1rem;">Bybit’s risk controls monitor and analyze user behavior in real-time.</div>
         </div>
+      </div>
+      <hr>
+      <div class="mb-4 d-flex flex-row align-items-center gap-3">
+        <img src="src/imgs/faqs/locked.svg" alt="Security by Design" style="width:28px;height:28px;">
+        <div>
+          <div class="fw-bold text-dark" style="font-size:1.15rem;">Security by Design</div>
+          <div class="text-secondary" style="font-size:1rem;">Our system prioritizes security, following a secure development life cycle.</div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#" class="btn btn-warning text-dark fw-bold px-4 py-2" style="border-radius:10px; font-size:1.15rem; width:100%;max-width:400px;">Sign Up Now</a>
       </div>
     </div>
   </section>
-
-<section class="cta-section py-5" style="background: radial-gradient(ellipse at center, #fff8e1 0%, #fffdf6 100%);">
-  <div class="container text-center">
-    <h2 class="fw-bold mb-4" style="font-size:2rem;">Embark on Your Crypto Journey Today!</h2>
-    <a href="#" class="btn btn-warning text-dark fw-bold px-4 py-2" style="border-radius:10px; font-size:1.15rem;">Sign Up Now &rarr;</a>
-  </div>
-</section>
-<section class="partner-marquee-section py-4" style="background: #fffbe6;">
+  <section class="cta-section py-5 d-none d-md-block" style="background: radial-gradient(ellipse at center, #fff8e1 0%, #fffdf6 100%);">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" style="font-size:2rem;">Embark on Your Crypto Journey Today!</h2>
+      <a href="#" class="btn btn-warning text-dark fw-bold px-4 py-2" style="border-radius:10px; font-size:1.15rem;">Sign Up Now &rarr;</a>
+    </div>
+  </section>
+<section class="partner-marquee-section py-4" style="background-color: w;">
   <div class="partner-marquee-container">
     <div class="partner-marquee">
       <ul>
@@ -583,20 +549,52 @@
     <div class="row align-items-start mb-4">
       <div class="col-lg-3 mb-4 mb-lg-0 text-center text-lg-start">
         <div class="footer-logo mb-3" style="font-size:2.5rem;font-weight:800;letter-spacing:2px;"><span style="color:#18181b;">BYB</span><span style="color:#ffbe2e;">I</span><span style="color:#18181b;">T</span></div>
-        <div class="footer-social d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 mb-2">
-          <a href="#"><img src="src/imgs/social/facebook.svg" alt="Facebook" width="32"></a>
-          <a href="#"><img src="src/imgs/social/x.svg" alt="X" width="32"></a>
-          <a href="#"><img src="src/imgs/social/instagram.svg" alt="Instagram" width="32"></a>
-          <a href="#"><img src="src/imgs/social/youtube.svg" alt="YouTube" width="32"></a>
-          <a href="#"><img src="src/imgs/social/linkedin.svg" alt="LinkedIn" width="32"></a>
-          <a href="#"><img src="src/imgs/social/telegram.svg" alt="Telegram" width="32"></a>
-          <a href="#"><img src="src/imgs/social/tiktok.svg" alt="TikTok" width="32"></a>
-          <a href="#"><img src="src/imgs/social/reddit.svg" alt="Reddit" width="32"></a>
-          <a href="#"><img src="src/imgs/social/discord.svg" alt="Discord" width="32"></a>
-          <a href="#"><img src="src/imgs/social/tradingview.svg" alt="TradingView" width="32"></a>
+        <div class="footer-social d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 mb-2 d-none d-md-flex">
+          <a href="#"><img src="src/imgs/icon_social_footer/image-202202a44cab428c9f645edfe343cffc.svg" alt="Social1" width="32"></a>
+          <a href="#"><img src="src/imgs/icon_social_footer/image-295646fc48fa4737aa878fff4f5d18b2.svg" alt="Social2" width="32"></a>
+          <a href="#"><img src="src/imgs/icon_social_footer/image-320c97a2b49f41929ea34f09fbee7aa9.svg" alt="Social3" width="32"></a>
+          <a href="#"><img src="src/imgs/icon_social_footer/image-b4c4cdab49504bf1bb3f94db42209fe9.svg" alt="Social4" width="32"></a>
+          <a href="#"><img src="src/imgs/icon_social_footer/image-d2e50505868b4d05b606282da60754f7.svg" alt="Social5" width="32"></a>
+          <a href="#"><img src="src/imgs/icon_social_footer/image-5b6cf41ca8714c0f9004aefdae775e28.svg" alt="Social6" width="32"></a>
+          <a href="#"><img src="src/imgs/icon_social_footer/image-35a7b515d0004f9ea15cfd0b6361252e.svg" alt="Social7" width="32"></a>
+          <a href="#"><img src="src/imgs/icon_social_footer/image-d0d0ea6a8e424ec9acc3bdda9d67a731.svg" alt="Social8" width="32"></a>
+          <a href="#"><img src="src/imgs/icon_social_footer/image-63fe5c478d98466bb89d2fc21aecc557.svg" alt="Social9" width="32"></a>
+          <a href="#"><img src="src/imgs/icon_social_footer/image-16facb40e95649209dfac5987cfaade2.svg" alt="Social10" width="32"></a>
         </div>
+        <!-- Mobile social dropdown -->
+        <div class="footer-social-mobile d-block d-md-none mb-2 text-center">
+          <button id="socialDropdownBtn" class="btn btn-outline-secondary w-100" style="border-radius:8px;">Social Links ▼</button>
+          <div id="socialDropdownMenu" class="mt-2" style="display:none; background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:10px 0;">
+            <a href="#" class="mx-2"><img src="src/imgs/icon_social_footer/image-202202a44cab428c9f645edfe343cffc.svg" alt="Social1" width="28"></a>
+            <a href="#" class="mx-2"><img src="src/imgs/icon_social_footer/image-295646fc48fa4737aa878fff4f5d18b2.svg" alt="Social2" width="28"></a>
+            <a href="#" class="mx-2"><img src="src/imgs/icon_social_footer/image-320c97a2b49f41929ea34f09fbee7aa9.svg" alt="Social3" width="28"></a>
+            <a href="#" class="mx-2"><img src="src/imgs/icon_social_footer/image-b4c4cdab49504bf1bb3f94db42209fe9.svg" alt="Social4" width="28"></a>
+            <a href="#" class="mx-2"><img src="src/imgs/icon_social_footer/image-d2e50505868b4d05b606282da60754f7.svg" alt="Social5" width="28"></a>
+            <a href="#" class="mx-2"><img src="src/imgs/icon_social_footer/image-5b6cf41ca8714c0f9004aefdae775e28.svg" alt="Social6" width="28"></a>
+            <a href="#" class="mx-2"><img src="src/imgs/icon_social_footer/image-35a7b515d0004f9ea15cfd0b6361252e.svg" alt="Social7" width="28"></a>
+            <a href="#" class="mx-2"><img src="src/imgs/icon_social_footer/image-d0d0ea6a8e424ec9acc3bdda9d67a731.svg" alt="Social8" width="28"></a>
+            <a href="#" class="mx-2"><img src="src/imgs/icon_social_footer/image-63fe5c478d98466bb89d2fc21aecc557.svg" alt="Social9" width="28"></a>
+            <a href="#" class="mx-2"><img src="src/imgs/icon_social_footer/image-16facb40e95649209dfac5987cfaade2.svg" alt="Social10" width="28"></a>
+          </div>
+        </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var btn = document.getElementById('socialDropdownBtn');
+            var menu = document.getElementById('socialDropdownMenu');
+            if(btn && menu) {
+              btn.addEventListener('click', function() {
+                menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+              });
+              document.addEventListener('click', function(e) {
+                if (!btn.contains(e.target) && !menu.contains(e.target)) {
+                  menu.style.display = 'none';
+                }
+              });
+            }
+          });
+        </script>
       </div>
-      <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+      <div class="col-lg-2 col-6 mb-4 mb-lg-0 d-none d-md-block">
         <div class="footer-title">About</div>
         <ul class="footer-list">
           <li><a href="#">About Bybit</a></li>
@@ -610,7 +608,7 @@
           <li><a href="#">Fees & Transactions Overview</a></li>
         </ul>
       </div>
-      <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+      <div class="col-lg-2 col-6 mb-4 mb-lg-0 d-none d-md-block">
         <div class="footer-title">Services</div>
         <ul class="footer-list">
           <li><a href="#">One-Click Buy</a></li>
@@ -623,7 +621,7 @@
           <li><a href="#">Audit</a></li>
         </ul>
       </div>
-      <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+      <div class="col-lg-2 col-6 mb-4 mb-lg-0 d-none d-md-block">
         <div class="footer-title">Support</div>
         <ul class="footer-list">
           <li><a href="#">Submit a Request</a></li>
@@ -636,7 +634,7 @@
           <li><a href="#">Authenticity Check</a></li>
         </ul>
       </div>
-      <div class="col-lg-2 col-6 mb-4 mb-lg-0">
+      <div class="col-lg-2 col-6 mb-4 mb-lg-0 d-none d-md-block">
         <div class="footer-title">Products</div>
         <ul class="footer-list">
           <li><a href="#">Trade</a></li>
@@ -647,6 +645,82 @@
           <li><a href="#">TradingView</a></li>
         </ul>
       </div>
+      <!-- Mobile Footer Dropdowns -->
+      <div class="col-12 d-block d-md-none">
+        <div class="footer-dropdown mb-0">
+          <button class="footer-dropdown-btn w-100 text-start fw-bold" style="font-size:1.05rem;padding:0.7rem 1rem;background:#f6f8fa;border:none;border-radius:18px 18px 0 0;outline:none;">About</button>
+          <div class="footer-dropdown-content" id="about-content" style="background:#fff;border-radius:0 0 18px 18px;padding:0.7rem 1rem;display:block;">
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;color:#888;text-decoration:none;">About Bybit</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;color:#888;text-decoration:none;">Press Room</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;color:#888;text-decoration:none;">Bybit Communities</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;color:#888;text-decoration:none;">Announcements</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;color:#888;text-decoration:none;">Risk Disclosure</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;color:#888;text-decoration:none;">Whistleblower Channel</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;color:#888;text-decoration:none;">Careers</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;color:#888;text-decoration:none;">Islamic Account</a>
+            <a href="#" class="d-block" style="font-size:0.98rem;color:#888;text-decoration:none;">Fees & Transactions Overview</a>
+          </div>
+        </div>
+        <div class="footer-dropdown mb-0">
+          <button class="footer-dropdown-btn w-100 text-start fw-bold" style="font-size:1.05rem;padding:0.7rem 1rem;background:#f6f8fa;border:none;border-radius:18px 18px 0 0;outline:none;">Services</button>
+          <div class="footer-dropdown-content" id="services-content" style="background:#fff;border-radius:0 0 18px 18px;padding:0.7rem 1rem;display:none;">
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">One-Click Buy</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">P2P Trading (0 Fees)</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">VIP Program</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">Referral Program</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">Institutional Services</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">Listing Application</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">Tax API</a>
+            <a href="#" class="d-block" style="font-size:0.98rem;">Audit</a>
+          </div>
+        </div>
+        <div class="footer-dropdown mb-0">
+          <button class="footer-dropdown-btn w-100 text-start fw-bold" style="font-size:1.05rem;padding:0.7rem 1rem;background:#f6f8fa;border:none;border-radius:18px 18px 0 0;outline:none;">Support</button>
+          <div class="footer-dropdown-content" id="support-content" style="background:#fff;border-radius:0 0 18px 18px;padding:0.7rem 1rem;display:none;">
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">Submit a Request</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">Help Center</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">Support Hub</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">User Feedback</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">Bybit Learn</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">Trading Fee</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">API</a>
+            <a href="#" class="d-block" style="font-size:0.98rem;">Authenticity Check</a>
+          </div>
+        </div>
+        <div class="footer-dropdown mb-0">
+          <button class="footer-dropdown-btn w-100 text-start fw-bold" style="font-size:1.05rem;padding:0.7rem 1rem;background:#f6f8fa;border:none;border-radius:18px 18px 0 0;outline:none;">Products</button>
+          <div class="footer-dropdown-content" id="products-content" style="background:#fff;border-radius:0 0 18px 18px;padding:0.7rem 1rem;display:none;">
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">Trade</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">Derivatives</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">Earn</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">Launchpad</a>
+            <a href="#" class="d-block mb-1" style="font-size:0.98rem;">Bybit Card</a>
+            <a href="#" class="d-block" style="font-size:0.98rem;">TradingView</a>
+          </div>
+        </div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          function toggleDropdown(btnId, contentId, arrowId) {
+            var btn = document.querySelector(btnId);
+            var content = document.querySelector(contentId);
+            var arrow = document.querySelector(arrowId);
+            btn.addEventListener('click', function() {
+              var isOpen = content.style.display === 'block';
+              document.querySelectorAll('.footer-dropdown-content').forEach(function(el) { el.style.display = 'none'; });
+              document.querySelectorAll('.footer-dropdown-btn span').forEach(function(el) { el.textContent = '▼'; });
+              if (!isOpen) {
+                content.style.display = 'block';
+                arrow.textContent = '▲';
+              }
+            });
+          }
+          toggleDropdown('.footer-dropdown-btn:nth-child(1)', '#about-content', '#about-arrow');
+          toggleDropdown('.footer-dropdown-btn:nth-child(3)', '#services-content', '#services-arrow');
+          toggleDropdown('.footer-dropdown-btn:nth-child(5)', '#support-content', '#support-arrow');
+          toggleDropdown('.footer-dropdown-btn:nth-child(7)', '#products-content', '#products-arrow');
+        });
+      </script>
     </div>
     <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center pt-3 pb-2 border-top" style="font-size:0.98rem;color:#888;">
       <div>&copy; 2018-2025 Bybit.com. All rights reserved.</div>
@@ -655,7 +729,8 @@
       </div>
     </div>
   </div>
-  <div class="footer-banner w-100 d-flex align-items-center justify-content-center gap-3" style="background:#ffe6b0;padding:1rem 0;position:relative;">
+
+  <div class="footer-banner w-100 d-flex align-items-center justify-content-center gap-3 d-none d-md-flex" style="background:#ffe6b0;padding:1rem 0;position:relative;">
     <img src="src/imgs/gif-box.png" alt="gift" style="width:36px;height:36px;">
     <span class="footer-banner-text" style="font-size:1.08rem;font-weight:500;color:#222;">Quickly register to join the bull market, complete tasks, and claim up to 5,050 USDT gift today!</span>
     <a href="#" class="btn btn-warning text-dark fw-bold px-4 py-2" style="border-radius:8px;">Claim</a>
@@ -722,8 +797,8 @@ body.style.maxHeight = null;
 function setHeroHeight() {
   var hero = document.getElementById('hero-section');
   if(window.innerWidth <= 600) {
-    hero.style.minHeight = '340px';
-    hero.style.height = '340px';
+    hero.style.minHeight = '200px';
+    hero.style.height = '200px';
   } else {
     hero.style.minHeight = '66vh';
     hero.style.height = '66vh';
