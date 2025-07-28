@@ -1,3 +1,113 @@
+// Header functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Dropdown menu functionality
+  const dropdownItems = document.querySelectorAll('.nav-item.dropdown');
+  
+  dropdownItems.forEach(item => {
+    const link = item.querySelector('.nav-link');
+    const arrow = item.querySelector('.dropdown-arrow');
+    
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Close other dropdowns
+      dropdownItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+        }
+      });
+      
+      // Toggle current dropdown
+      item.classList.toggle('active');
+    });
+  });
+  
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item.dropdown')) {
+      dropdownItems.forEach(item => {
+        item.classList.remove('active');
+      });
+    }
+  });
+  
+  // Search functionality
+  const searchInput = document.querySelector('.search-input');
+  if (searchInput) {
+    searchInput.addEventListener('focus', function() {
+      this.parentElement.style.border = '1px solid #ffbe2e';
+    });
+    
+    searchInput.addEventListener('blur', function() {
+      this.parentElement.style.border = 'none';
+    });
+  }
+  
+  // Header scroll effect
+  let lastScrollTop = 0;
+  const header = document.querySelector('.bybit-header');
+  
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+      // Scrolling down
+      header.style.transform = 'translateY(-100%)';
+    } else {
+      // Scrolling up
+      header.style.transform = 'translateY(0)';
+    }
+    
+    lastScrollTop = scrollTop;
+  });
+  
+  // Button click handlers
+  const loginBtn = document.querySelector('.btn-login');
+  const signupBtn = document.querySelector('.btn-signup');
+  
+  if (loginBtn) {
+    loginBtn.addEventListener('click', function() {
+      alert('登录功能即将推出！');
+    });
+  }
+  
+  if (signupBtn) {
+    signupBtn.addEventListener('click', function() {
+      alert('注册功能即将推出！');
+    });
+  }
+  
+  // Icon button handlers
+  const downloadBtn = document.querySelector('.download-icon');
+  const globeBtn = document.querySelector('.globe-icon');
+  
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', function() {
+      alert('下载应用功能即将推出！');
+    });
+  }
+  
+  if (globeBtn) {
+    globeBtn.addEventListener('click', function() {
+      alert('语言选择功能即将推出！');
+    });
+  }
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
 // Connect to WebSocket and update marketTabContent
 window.addEventListener('DOMContentLoaded', () => {
   const ws = new WebSocket('wss://api.cloveragency.co/ws');
