@@ -1423,3 +1423,22 @@ body {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 } 
+
+@media (max-width: 600px) {
+  .market-section .row.fw-semibold > .col-2,
+  .market-section .row.fw-semibold > .col-1,
+  .market-section .row.align-items-center > .col-2,
+  .market-section .row.align-items-center > .col-1 {
+    display: none !important;
+  }
+} 
+
+@media (max-width: 600px) {
+  /* Ẩn cột Charts và Trade, giữ lại 24H Change */
+  .market-section .row.fw-semibold > .col-2:last-child,
+  .market-section .row.fw-semibold > .col-1,
+  .market-section .row.align-items-center > .col-2:last-child,
+  .market-section .row.align-items-center > .col-1 {
+    display: none !important;
+  }
+} 

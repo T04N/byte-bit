@@ -117,7 +117,7 @@
   </header>
 
   <div class="hero-container">
-    <div class="hero position-relative d-flex align-items-center justify-content-between" style="min-height:66vh; height:66vh; width:100vw; background:url('src/imgs/bg-desktop.avif') no-repeat center center/cover;">
+    <div class="hero position-relative d-flex align-items-center justify-content-between" style="height:66vh;  background:url('src/imgs/bg-desktop.avif') no-repeat center center/cover;" id="hero-section">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 col-12">
@@ -172,10 +172,10 @@
                   <!-- Table header -->
                   <div class="row fw-semibold text-secondary mb-2" style="font-size:0.8rem;">
                     <div class="col-4">Trading Pairs</div>
-                    <div class="col-3">Last Traded Price</div>
-                    <div class="col-2">24H Change</div>
-                    <div class="col-2">Charts</div>
-                    <div class="col-1">Trade</div>
+                    <div class="col-4">Last Traded Price</div>
+                    <div class="col-4">24H Change</div>
+                    <div class="col-2 d-none d-md-block">Charts</div>
+                    <div class="col-1 d-none d-md-block">Trade</div>
                   </div>
                   <!-- Example rows -->
                   <div class="row align-items-center mb-2">
@@ -183,9 +183,9 @@
                       <img src="src/imgs/coin/ETHUSDT.svg" alt="ETH" width="22" height="22">
                       <span>ETHUSDT</span>
                     </div>
-                    <div class="col-3 fw-bold">3,817.72</div>
-                    <div class="col-2 text-success fw-bold">+2.02%</div>
-                    <div class="col-2">
+                    <div class="col-4 fw-bold">3,817.72</div>
+                    <div class="col-4 text-success fw-bold">+2.02%</div>
+                    <div class="col-2 d-none d-md-block">
                       <svg width="40" height="18" viewBox="0 0 52 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
                         <defs>
                           <linearGradient id="jb6he9m1ou" x1="0" y1="0" x2="0" y2="22" gradientUnits="userSpaceOnUse">
@@ -196,7 +196,7 @@
                         <path d="M-1 20L-1 15.39L0 15.39L2.17 15.12L4.34 17.34L6.51 16.25L8.68 17.31L10.85 18L13.02 15.73L15.19 14.3L17.36 15.07L19.53 13.14L21.7 14.35L23.87 15.53L26.04 13.46L28.21 13.45L30.38 9.45L32.55 10.97L34.72 8.61L36.89 8.58L39.06 11.23L41.23 11.87L43.4 11.44L45.57 12.47L47.74 5L49.91 5.43L51 21 Z" fill="url(#jb6he9m1ou)" stroke="rgba(24, 22, 55, .11)" stroke-width="1"></path>
                       </svg>
                     </div>
-                    <div class="col-1"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
+                    <div class="col-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
                   </div>
                  
                   <div class="row align-items-center mb-2">
@@ -204,9 +204,9 @@
                       <img src="src/imgs/coin/BTCUSDT.svg" alt="BTC" width="22" height="22">
                       <span>BTCUSDT</span>
                     </div>
-                    <div class="col-3 fw-bold">118,017</div>
-                    <div class="col-2 text-success fw-bold">+0.1%</div>
-                    <div class="col-2">
+                    <div class="col-4 fw-bold">118,017</div>
+                    <div class="col-4 text-success fw-bold">+0.1%</div>
+                    <div class="col-2 d-none d-md-block">
                       <svg width="40" height="18" viewBox="0 0 52 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
                         <defs>
                           <linearGradient id="jb6he9m1ou" x1="0" y1="0" x2="0" y2="22" gradientUnits="userSpaceOnUse">
@@ -217,16 +217,16 @@
                         <path d="M-1 20L-1 15.39L0 15.39L2.17 15.12L4.34 17.34L6.51 16.25L8.68 17.31L10.85 18L13.02 15.73L15.19 14.3L17.36 15.07L19.53 13.14L21.7 14.35L23.87 15.53L26.04 13.46L28.21 13.45L30.38 9.45L32.55 10.97L34.72 8.61L36.89 8.58L39.06 11.23L41.23 11.87L43.4 11.44L45.57 12.47L47.74 5L49.91 5.43L51 21 Z" fill="url(#jb6he9m1ou)" stroke="rgba(24, 22, 55, .11)" stroke-width="1"></path>
                       </svg>
                     </div>
-                    <div class="col-1"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
+                    <div class="col-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
                   </div>
                   <div class="row align-items-center mb-2">
                     <div class="col-4 d-flex align-items-center gap-2">
                       <img src="src/imgs/coin/XRPUSDT.svg" alt="XRP" width="22" height="22">
                       <span>XRPUSDT</span>
                     </div>
-                    <div class="col-3 fw-bold">3.1752</div>
-                    <div class="col-2 text-danger fw-bold">-0.44%</div>
-                    <div class="col-2">
+                    <div class="col-4 fw-bold">3.1752</div>
+                    <div class="col-4 text-danger fw-bold">-0.44%</div>
+                    <div class="col-2 d-none d-md-block">
                       <svg width="40" height="18" viewBox="0 0 52 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
                         <defs>
                           <linearGradient id="jb6he9m1ou" x1="0" y1="0" x2="0" y2="22" gradientUnits="userSpaceOnUse">
@@ -237,16 +237,16 @@
                         <path d="M-1 20L-1 15.39L0 15.39L2.17 15.12L4.34 17.34L6.51 16.25L8.68 17.31L10.85 18L13.02 15.73L15.19 14.3L17.36 15.07L19.53 13.14L21.7 14.35L23.87 15.53L26.04 13.46L28.21 13.45L30.38 9.45L32.55 10.97L34.72 8.61L36.89 8.58L39.06 11.23L41.23 11.87L43.4 11.44L45.57 12.47L47.74 5L49.91 5.43L51 21 Z" fill="url(#jb6he9m1ou)" stroke="rgba(24, 22, 55, .11)" stroke-width="1"></path>
                       </svg>
                     </div>
-                    <div class="col-1"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
+                    <div class="col-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
                   </div>
                   <div class="row align-items-center mb-2">
                     <div class="col-4 d-flex align-items-center gap-2">
                       <img src="src/imgs/coin/SOLUSDT.svg" alt="SOL" width="22" height="22">
                       <span>SOLUSDT</span>
                     </div>
-                    <div class="col-3 fw-bold">186.67</div>
-                    <div class="col-2 text-danger fw-bold">-0.76%</div>
-                    <div class="col-2">
+                    <div class="col-4 fw-bold">186.67</div>
+                    <div class="col-4 text-danger fw-bold">-0.76%</div>
+                    <div class="col-2 d-none d-md-block">
                       <svg width="40" height="18" viewBox="0 0 52 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
                         <defs>
                           <linearGradient id="jb6he9m1ou" x1="0" y1="0" x2="0" y2="22" gradientUnits="userSpaceOnUse">
@@ -257,16 +257,16 @@
                         <path d="M-1 20L-1 15.39L0 15.39L2.17 15.12L4.34 17.34L6.51 16.25L8.68 17.31L10.85 18L13.02 15.73L15.19 14.3L17.36 15.07L19.53 13.14L21.7 14.35L23.87 15.53L26.04 13.46L28.21 13.45L30.38 9.45L32.55 10.97L34.72 8.61L36.89 8.58L39.06 11.23L41.23 11.87L43.4 11.44L45.57 12.47L47.74 5L49.91 5.43L51 21 Z" fill="url(#jb6he9m1ou)" stroke="rgba(24, 22, 55, .11)" stroke-width="1"></path>
                       </svg>
                     </div>
-                    <div class="col-1"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
+                    <div class="col-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
                   </div>
                   <div class="row align-items-center mb-2">
                     <div class="col-4 d-flex align-items-center gap-2">
                       <img src="src/imgs/coin/SUIUSDT.svg" alt="SUI" width="22" height="22">
                       <span>SUIUSDT</span>
                     </div>
-                    <div class="col-3 fw-bold">4.3263</div>
-                    <div class="col-2 text-success fw-bold">+6.4%</div>
-                    <div class="col-2">
+                    <div class="col-4 fw-bold">4.3263</div>
+                    <div class="col-4 text-success fw-bold">+6.4%</div>
+                    <div class="col-2 d-none d-md-block">
                       <svg width="40" height="18" viewBox="0 0 52 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
                         <defs>
                           <linearGradient id="jb6he9m1ou" x1="0" y1="0" x2="0" y2="22" gradientUnits="userSpaceOnUse">
@@ -277,15 +277,15 @@
                         <path d="M-1 20L-1 15.39L0 15.39L2.17 15.12L4.34 17.34L6.51 16.25L8.68 17.31L10.85 18L13.02 15.73L15.19 14.3L17.36 15.07L19.53 13.14L21.7 14.35L23.87 15.53L26.04 13.46L28.21 13.45L30.38 9.45L32.55 10.97L34.72 8.61L36.89 8.58L39.06 11.23L41.23 11.87L43.4 11.44L45.57 12.47L47.74 5L49.91 5.43L51 21 Z" fill="url(#jb6he9m1ou)" stroke="rgba(24, 22, 55, .11)" stroke-width="1"></path>
                       </svg>
                     </div>
-                    <div class="col-1"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
+                    <div class="col-1 d-none d-md-block"><a href="#" class="btn btn-trade-custom text-warning fw-bold" style="font-size:0.92rem;padding:0.2rem 0.7rem;border-radius:7px;border:1.5px solid #ffbe2e;background:#fff;">Trade</a></div>
                   </div>
                   <div class="row align-items-center mb-2">
                     <div class="col-4 d-flex align-items-center gap-2">
                       <img src="src/imgs/coin/DOGEUSDT.svg" alt="DOGE" width="22" height="22">
                       <span>DOGEUSDT</span>
                     </div>
-                    <div class="col-3 fw-bold">0.00002706</div>
-                    <div class="col-2"><span class="change-badge zero">-0%</span></div>
+                    <div class="col-4 fw-bold">0.00002706</div>
+                    <div class="col-4"><span class="change-badge zero">-0%</span></div>
                     <div class="col-2 d-none d-md-block"></div>
                     <div class="col-1 d-none d-md-block"></div>
                   </div>
@@ -717,3 +717,18 @@ body.style.maxHeight = null;
 });
 </script>
 <script type="module" src="main.js"></script>
+<script>
+// Responsive hero height for mobile
+function setHeroHeight() {
+  var hero = document.getElementById('hero-section');
+  if(window.innerWidth <= 600) {
+    hero.style.minHeight = '340px';
+    hero.style.height = '340px';
+  } else {
+    hero.style.minHeight = '66vh';
+    hero.style.height = '66vh';
+  }
+}
+window.addEventListener('resize', setHeroHeight);
+document.addEventListener('DOMContentLoaded', setHeroHeight);
+</script>
