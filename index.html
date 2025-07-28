@@ -5,6 +5,8 @@
   <title>Next Level</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="hero-container">
@@ -13,13 +15,6 @@
         <div class="row align-items-center">
           <div class="col-lg-6 col-12">
             <h1 class="display-2 fw-bold mb-3 hero-title">Next Level</h1>
-            <div class="fs-2 fw-semibold mb-4 hero-subtitle-row">
-              <span>Trading</span>
-              <span class="mx-3 text-secondary">|</span>
-              <span>Earning</span>
-              <span class="mx-3 text-secondary">|</span>
-              <span>Learning</span>
-            </div>
             <div class="d-flex align-items-center mb-3 hero-bonus">
               <span class="me-2">🎁</span>
               <span class="hero-bonus-desktop">Sign up to get <span class="text-warning fw-bold">5,050</span> in Bonuses and Mystery Boxes</span>
@@ -60,20 +55,11 @@
     <div class="container">
       <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
         <h3 class="fw-bold mb-0 text-dark">Catch Your Next Trading Opportunity</h3>
-        <a href="#" class="btn btn-trade-custom fw-bold px-4 py-2 ms-3" style="font-size:1.1rem;">Market Overview &rarr;</a>
       </div>
       <div class="row g-4">
-        <div class="col-lg-7">
+        <div class="col-lg-12">
           <div class="card shadow-sm rounded-4">
             <div class="card-body">
-              <ul class="nav nav-tabs mb-3" id="marketTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active fw-bold" id="hot-derivatives-tab" data-bs-toggle="tab" data-bs-target="#hot-derivatives" type="button" role="tab" aria-controls="hot-derivatives" aria-selected="true">Hot Derivatives</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link fw-bold" id="hot-coins-tab" data-bs-toggle="tab" data-bs-target="#hot-coins" type="button" role="tab" aria-controls="hot-coins" aria-selected="false">Hot Coins</button>
-                </li>
-              </ul>
               <div class="tab-content" id="marketTabContent">
                 <div class="tab-pane fade show active" id="hot-derivatives" role="tabpanel" aria-labelledby="hot-derivatives-tab">
                   <!-- Table header -->
@@ -196,7 +182,6 @@
                     <div class="col-2 d-none d-md-block"></div>
                     <div class="col-1 d-none d-md-block"></div>
                   </div>
-                  <div class="view-more">View More &rarr;</div>
                 </div>
                 <div class="tab-pane fade" id="hot-coins" role="tabpanel" aria-labelledby="hot-coins-tab">
                   <div class="row fw-semibold text-secondary mb-2" style="font-size:0.97rem;">
@@ -229,66 +214,6 @@
                   <!-- Thêm các dòng mẫu khác nếu muốn -->
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5 d-none d-md-block">
-          <div class="card shadow-sm rounded-4 mb-4">
-            <div class="card-body">
-              <div class="fw-bold mb-3">Top Gainers</div>
-              <!-- Example top gainers -->
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <div class="d-flex align-items-center gap-2">
-                  <img src="src/imgs/top_gainers/DBRUSDT.png" alt="DBR" width="28" height="28">
-                  <span>DBRUSDT</span>
-                </div>
-                <div class="fw-bold">0.03359</div>
-                <div class="text-success fw-bold">+35.22%</div>
-              </div>
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <div class="d-flex align-items-center gap-2">
-                  <img src="src/imgs/top_gainers/ZORAUSDT.png" alt="ZORA" width="28" height="28">
-                  <span>ZORAUSDT</span>
-                </div>
-                <div class="fw-bold">0.075387</div>
-                <div class="text-success fw-bold">+30.2%</div>
-              </div>
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <div class="d-flex align-items-center gap-2">
-                  <img src="src/imgs/top_gainers/OMNIUSDT.svg" alt="OMNI" width="28" height="28">
-                  <span>OMNIUSDT</span>
-                </div>
-                <div class="fw-bold">3.013</div>
-                <div class="text-success fw-bold">+24.34%</div>
-              </div>
-              <!-- Thêm các dòng khác tương tự ở đây -->
-              <div class="fw-bold mt-4 mb-3">New Listings</div>
-              <!-- Example new listings -->
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <div class="d-flex align-items-center gap-2">
-                  <img src="src/imgs/top_gainers/ASPUSDT.png" alt="ASP" width="28" height="28">
-                  <span>ASPUSDT</span>
-                </div>
-                <div class="fw-bold">0.2246</div>
-                <div class="text-success fw-bold">+9.45%</div>
-              </div>
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <div class="d-flex align-items-center gap-2">
-                  <img src="src/imgs/top_gainers/DIAUSDT.png" alt="DIA" width="28" height="28">
-                  <span>DIAUSDT</span>
-                </div>
-                <div class="fw-bold">0.8953</div>
-                <div class="text-danger fw-bold">-6.05%</div>
-              </div>
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <div class="d-flex align-items-center gap-2">
-                  <img src="src/imgs/top_gainers/APEUSDT.svg" alt="APE" width="28" height="28">
-                  <span>APEUSDT</span>
-                </div>
-                <div class="fw-bold">0.6441</div>
-                <div class="text-success fw-bold">+0.57%</div>
-              </div>
-              <!-- Thêm các dòng khác tương tự ở đây -->
             </div>
           </div>
         </div>
@@ -684,3 +609,4 @@ header.addEventListener('click', function() {
 body.style.maxHeight = null;
 });
 </script>
+<script type="module" src="main.js"></script>
